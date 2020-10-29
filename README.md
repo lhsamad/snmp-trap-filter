@@ -50,6 +50,13 @@ Run With Maven
 ---------------
 ```mvn compile exec:java -Dsnmp_trap_config=/Users/luqmansamad/projects/snmp.yaml```
 
+Build and run jar
+---------------
+```
+mvn clean install
+mvn clean compile assembly:single
+java -jar target/snmp-trap-filter-1.0-SNAPSHOT-jar-with-dependencies.jar -Dsnmp_trap_config=/Users/luqmansamad/projects/snmp.yaml
+```
 
 
 

@@ -1,4 +1,4 @@
-package luke.opennms.quest;
+import luke.opennms.quest.SnmpTrapFilter;
 
 import java.util.Scanner;
 
