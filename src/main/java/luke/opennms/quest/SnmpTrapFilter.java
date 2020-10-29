@@ -13,6 +13,10 @@ import java.util.TreeMap;
 public class SnmpTrapFilter {
 
     static String SNMP_TRAP_CONFIG = "snmp_trap_config";
+    /*
+    * I wanta use a simple hashMap but I'm not sure where to stop looking "dpsRTU" I think but I need more understanding
+    * This should be accurate
+    * */
     static private SortedMap<String, String> PREFIXES = new TreeMap<>();
     static private Integer MIN_PREFIX_LENGTH = Integer.MAX_VALUE;
 
@@ -31,7 +35,7 @@ public class SnmpTrapFilter {
 
     private void print(){
         System.out.println("\n\n------------------ snmp.yaml configuration contains ------------------");
-        PREFIXES.keySet().stream().forEach(System.out::println);
+        PREFIXES.keySet().stream().sorted().forEach(System.out::println);
         System.out.println("--------------------------------------------------------------------------");
     }
 
